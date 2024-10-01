@@ -26,24 +26,24 @@
             <!-- Card 1 -->
             <div class="bg-white shadow-lg rounded-lg p-6">
                 <h2 class="text-2xl font-semibold text-gray-800 mb-4">Total Users</h2>
-                <p class="text-4xl font-bold text-blue-600">1,024</p>
+                <p class="text-4xl font-bold text-blue-600">{{\App\Models\User::count()}}</p>
             </div>
 
             <!-- Card 2 -->
             <div class="bg-white shadow-lg rounded-lg p-6">
-                <h2 class="text-2xl font-semibold text-gray-800 mb-4">New Posts</h2>
-                <p class="text-4xl font-bold text-blue-600">256</p>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Topics</h2>
+                <p class="text-4xl font-bold text-blue-600">{{\App\Models\Topic::count()}}</p>
             </div>
 
             <!-- Card 3 -->
             <div class="bg-white shadow-lg rounded-lg p-6">
-                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Comments</h2>
-                <p class="text-4xl font-bold text-blue-600">768</p>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Posts</h2>
+                <p class="text-4xl font-bold text-blue-600">{{\App\Models\Post::count()}}</p>
             </div>
 
             <!-- Card 4 -->
             <div class="bg-white shadow-lg rounded-lg p-6">
-                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Pending Reviews</h2>
+                <h2 class="text-2xl font-semibold text-gray-800 mb-4">Draft</h2>
                 <p class="text-4xl font-bold text-blue-600">34</p>
             </div>
         </div>

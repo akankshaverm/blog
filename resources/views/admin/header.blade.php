@@ -10,7 +10,8 @@
         <nav class="space-x-6">
             <a href="{{route('admin.dashboard')}}" class="hover:text-gray-200">Dashboard</a>
             <a href="{{route('admin.topics')}}" class="hover:text-gray-200">Topics</a>
-            <a href="/view/45678" class="hover:text-gray-200">Posts</a>
+            <a href="{{route('admin.posts')}}" class="hover:text-gray-200">Posts</a>
+            <a href="{{route('admin.posts.create')}}" class="hover:text-gray-200">Insert Posts</a>
             <a href="#contact" class="hover:text-gray-200">Users</a>
             <a href="#contact" class="hover:text-gray-200">Settings</a>
         </nav>

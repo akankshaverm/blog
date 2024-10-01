@@ -26,10 +26,29 @@
                 <a href="#contact" class="hover:text-gray-200">Contact</a>
             </nav>
 
+
+
+
             <!-- CTA Button -->
+            @guest
             <div>
-                <a href="#subscribe" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-300">Sign Up</a>
+                <a href="{{route('signup')}}" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500">Sign Up</a>
+                <a href="{{route('login')}}" class="bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-300">Login</a>
             </div>
+            @endguest
+
+            @auth
+            <div class=" flex items-center gap-3">
+                <span>Hi,</span>
+                <h2>{{auth()->user()->name}}</h2>
+
+            </div>
+            <div class=" flex items-center gap-3">
+                <a href="{{route('logout')}}" class="bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-300">Logout</a>
+
+            </div>
+            @endauth
+
         </div>
     </header>
 

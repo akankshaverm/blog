@@ -1,6 +1,7 @@
 <div>
     <!-- Form for Topic Insertion -->
-    <form wire:submit.prevent="save" method="POST">
+    <form wire:submit.prevent="save">
+        
         <!-- Topic Title -->
         <div class="mb-6">
             <label for="topic-title" class="block text-lg font-semibold text-gray-700">Topic Title</label>

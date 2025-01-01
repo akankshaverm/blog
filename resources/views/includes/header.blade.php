@@ -41,12 +41,11 @@
             <div class=" flex items-center gap-3">
                 <span>Hi,</span>
                 <h2>{{auth()->user()->name}}</h2>
-
-            </div>
-            <div class=" flex items-center gap-3">
                 <a href="{{route('logout')}}" class="bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-300">Logout</a>
 
+
             </div>
+            
             @endauth
 
         </div>

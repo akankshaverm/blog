@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Laravel\Socialite\Facades\Socialite;
 
@@ -13,8 +12,6 @@ class LoginController extends Controller
     {
         return Socialite::driver("google")->redirect();
     }
-
-
     public function handleGoogleCallback()
     {
         try {
@@ -36,14 +33,13 @@ class LoginController extends Controller
                 ]);
                 //Log the new user in
                 Auth::login($user);
-                return redirect()->intended("/homepage");
             }
+            return redirect()->intended("homepage");
         } catch (\Exception $e) {
             //Handle exception for example log the error
-            return redirect()->route("login")->with("error", "An erroe occurred while trying to authenticate with Google.Please try agaon later.");
+            return redirect()->route("login")->with("error", "An error occurred while trying to authenticate with Google.Please try agaon later.");
         }
     }
-
     public function auth_logout()
     {
         Auth::logout();

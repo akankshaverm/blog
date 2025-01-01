@@ -29,6 +29,6 @@ class Signup extends Component
             'password' => $this->password
             ]
         );
-        return redirect()->route('homepage');
+        return redirect()->route('login');
     }
 }

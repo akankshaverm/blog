@@ -11,12 +11,12 @@ use Illuminate\Support\Facades\Route;
 Route::view("/", "home")->name('homepage');
 
 Route::get("/view/{post_id}", function ($post_id) {
-    return view("singlePost",['post_id'=>$post_id]);
+    return view("singlePost", ['post_id' => $post_id]);
 })->name("post.show");
 
-Route::get("/filter/{cat_id}", function ($cat_id){
+Route::get("/filter/{cat_id}", function ($cat_id) {
     $topic = Topic::find($cat_id);
-    return view("filter",['cat_id'=>$cat_id,'topic'=>$topic]);
+    return view("filter", ['cat_id' => $cat_id, 'topic' => $topic]);
 })->name('filter');
 
 Route::prefix("admin")->group(function () {
@@ -32,15 +32,14 @@ Route::prefix("admin")->group(function () {
         return view("admin.manage-post");
     })->name("admin.posts");
 
-    Route::get("/posts/create",function(){
+    Route::get("/posts/create", function () {
         return view("admin.insert-post");
     })->name("admin.posts.create");
-
-    });
-Route::get("/signup",function(){
+});
+Route::get("/signup", function () {
     return view("register");
 })->name('signup');
-Route::get("/login",function(){
+Route::get("/login", function () {
     return view("login");
 })->name('login');
 
